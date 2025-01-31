@@ -1,0 +1,34 @@
+/* table {
+    border-style: solid;
+    border: black;
+} */
+table{
+    border: 1px solid;
+    width: 500px;
+    height: auto;
+  }
+.superpower-box {
+    border: 1px solid;
+    width: 350px;
+    height: 100px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.name-box {
+    width: 100px;
+    height: 20px;
+    border: 1px solid;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.humility-box {
+    width: 50px;
+    height: 20px;
+    border: 1px solid;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.td-container{
+    top: 0px;
+    left: 0px;
+}
