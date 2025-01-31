@@ -4,10 +4,10 @@
  */
 
 import '@testing-library/jest-dom';
-import { GET, POST } from '../../src/app/api/superhero/route.js';
+import { GET, POST } from '../../src/app/api/superheroes/route.js';
  
 describe('Page', () => {
-  it('tests that GET api/superhero is properly called', async () => {
+  it('tests that GET api/superheroes is properly called', async () => {
     const response = await GET();
       const body = await response.json();
     

@@ -12,11 +12,11 @@ export default function Input(props: InputProps) {
   const [data, setData] = useState({
     name: "",
     superpower: "",
-    humility: 0,
+    humility: 1,
     valid: true,
   });
   const postData = () => {
-    fetch("api/superhero", {
+    fetch("api/superheroes", {
       method: "POST",
       body: JSON.stringify({
         name: data.name,
@@ -31,7 +31,7 @@ export default function Input(props: InputProps) {
         return res.json();
       })
       .then((data) => {
-        setData({ name: "", superpower: "", humility: 0, valid: true });
+        setData({ name: "", superpower: "", humility: 1, valid: true });
         // updates the changed value of the parent state, used so useEffect fetches the Superheroes on load and on every future change, but doesn't get stuck in a loop
         props.onChange({ ...props.baseState, changed: true });
       });

@@ -19,7 +19,7 @@ export default function Superhero() {
     changed: false,
   } as SuperheroState);
   useEffect(() => {
-    fetch("api/superhero")
+    fetch("api/superheroes")
       .then((res) => {
         return res.json();
       })
