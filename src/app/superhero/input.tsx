@@ -4,8 +4,7 @@ import { SuperheroState } from "../page";
 import "./input.css";
 
 interface InputProps {
-  baseState: SuperheroState;
-  onChange: Dispatch<SetStateAction<SuperheroState>>;
+  onChange: () => void;
 }
 
 export default function Input(props: InputProps) {
@@ -33,7 +32,7 @@ export default function Input(props: InputProps) {
       .then((data) => {
         setData({ name: "", superpower: "", humility: 1, valid: true });
         // updates the changed value of the parent state, used so useEffect fetches the Superheroes on load and on every future change, but doesn't get stuck in a loop
-        props.onChange({ ...props.baseState, changed: true });
+        props.onChange();
       });
   };
 

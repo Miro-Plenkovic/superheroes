@@ -31,7 +31,7 @@ export default function Superhero() {
   return (
     <>
       {/* contains the inputs for the creation of new superheroes */}
-      <Input baseState={state} onChange={setState}></Input>
+      <Input onChange={() => setState({ ...state, changed: true })}></Input>
       {/* presents the superhero data in a table format */}
       <TableData data={state.data}></TableData>
     </>
